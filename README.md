@@ -21,10 +21,6 @@ Este proyecto en Spring Boot gestiona libros y autores, proporcionando funciones
 1. **Base de Datos**: Asegúrate de configurar correctamente la conexión a la base de datos en `application.properties`.
 2. **Ejecución**: Ejecuta la aplicación usando Spring Boot o desde tu IDE preferido.
 
-## Uso
-
-Describe cómo instalar y usar tu aplicación aquí.
-
 ## Contribución
 
 Si quieres contribuir a este proyecto, por favor sigue estos pasos:
