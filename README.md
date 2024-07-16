@@ -1,23 +1,59 @@
-# Sistema de Gestión de Inventario
+# Proyecto LiterAlura - Sistema de Gestión de Libros
 
-Este proyecto es un sistema web para la gestión de inventario de productos, desarrollado con PHP, JavaScript, HTML, CSS y MySQL. Permite registrar productos, gestionar stock, aplicar filtros dinámicos, y mostrar detalles de productos en modalidades.
+Este proyecto utiliza Spring Boot y Java para gestionar y mostrar información sobre libros utilizando la API Gutendex, un catálogo de más de 70,000 libros de Project Gutenberg.
 
-## Características
+## Descripción
 
-- Registro de productos y gestión de stock.
-- Filtros dinámicos para buscar productos por código, nombre, empresa, categoría y marca.
-- Visualización de detalles de productos en modales.
-- Paginación para mostrar productos en tablas con 10 productos por página.
+El sistema permite realizar consultas a la API Gutendex para obtener información detallada sobre libros, incluyendo títulos, autores, temas, formatos y más. Utiliza Spring Boot para la configuración del backend y Gson para el manejo de datos en formato JSON.
 
-## Tecnologías Utilizadas
+## Configuración del Entorno de Desarrollo
 
-- **Frontend**: HTML, CSS, JavaScript (incluyendo AJAX para actualizaciones dinámicas).
-- **Backend**: PHP para lógica de negocio y comunicación con la base de datos.
-- **Base de Datos**: MySQL para almacenamiento de productos, stock y detalles.
-- **Herramientas**: PHPMyAdmin para administración de la base de datos.
+### Requisitos Previos
 
-## Instalación y Uso
+- Java JDK 11 o superior
+- Maven 3.x
+- IDE compatible con Java (Eclipse, IntelliJ IDEA, etc.)
 
-1. **Clonar el Repositorio**:
-   ```bash
-   git clone https://github.com/tuusuario/tuproyecto.git
+### Dependencias en pom.xml
+
+Asegúrate de tener las siguientes dependencias en tu archivo `pom.xml`:
+
+```xml
+<dependencies>
+    <!-- Spring Boot -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- Gson -->
+    <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.10.1</version>
+    </dependency>
+
+    <!-- Jackson -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.16.0</version>
+    </dependency>
+
+    <!-- HttpClient -->
+    <dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>4.5.13</version>
+    </dependency>
+</dependencies>
